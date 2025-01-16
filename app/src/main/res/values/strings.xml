@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Word Cache</string>
     <string name="header_str">Containers</string>
+    <color name="dark_magenta">#425B58</color>
+
+    <string name="nav_drw_open">Open navigation drawer</string>
+    <string name="nav_drw_close">Closer navigation drawer</string>
 </resources>
