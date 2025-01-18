@@ -13,18 +13,20 @@
 
 
     <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:layout_gravity="start"
         android:background="@color/light_cyan"
-        android:id="@+id/nav_view"
+        android:visibility="visible"
         app:headerLayout="@layout/header"
-        app:menu="@menu/main_menu"
-        android:layout_gravity="start"/>
+        app:menu="@menu/main_menu" />
 
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/clear_cyan">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -52,6 +54,7 @@
             android:fontFamily="@font/baloo"
             android:text="@string/header_str"
             android:textSize="30sp"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/toolbar" />
@@ -71,12 +74,19 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 app:cardElevation="3dp"
-                app:cardMaxElevation="5dp">
+                app:cardMaxElevation="5dp"
+                android:radius="12dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cardview_body">
 
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new_word" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
@@ -90,8 +100,14 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cardview_body">
 
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new_container" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
