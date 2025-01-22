@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomeFragment">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/baloo"
+        android:text="@string/header_str"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.089" />
+
+    <LinearLayout
+        android:id="@+id/addButtonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <RelativeLayout
+            android:layout_width="175dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/addcontent_background"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/addWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_word"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <RelativeLayout
+                android:layout_width="130dp"
+                android:layout_height="95dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="-57dp"
+                android:layout_marginBottom="-40dp"
+                android:background="@drawable/addbutton_shape"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="68dp"
+                    android:layout_marginBottom="45dp"
+                    android:src="@drawable/add_icon" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="175dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/addcontent_background"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/addContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_container"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <RelativeLayout
+                android:layout_width="130dp"
+                android:layout_height="95dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="-57dp"
+                android:layout_marginBottom="-40dp"
+                android:background="@drawable/addbutton_shape"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="68dp"
+                    android:layout_marginBottom="45dp"
+                    android:src="@drawable/add_icon" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/learnWordLayout"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/addButtonsLayout"
+        app:layout_constraintStart_toStartOf="@+id/addButtonsLayout"
+        app:layout_constraintTop_toBottomOf="@+id/addButtonsLayout">
+
+        <RelativeLayout
+            android:layout_width="360dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/wordoftheday_shape"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="18dp"
+                android:text="@string/learnWord_str"
+                android:textColor="@color/cream"
+                android:textSize="30sp"
+                android:textStyle="bold|italic" />
+
+            <RelativeLayout
+                android:layout_width="400dp"
+                android:layout_height="450dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="-184dp"
+                android:layout_marginBottom="-40dp"
+                android:background="@drawable/wordoftheday_backgroundshape"
+                android:orientation="vertical"
+                android:rotation="11">
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/newspaper_icon" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/appOptionsButtons"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/learnWordLayout">
+
+        <RelativeLayout
+            android:layout_width="115dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/addoptions_border"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/collections_icon_clear"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="0dp"
+                android:text="@string/containers_str"
+                android:textAlignment="textStart"
+                android:textColor="@color/clear_cyan"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="115dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/addoptions_border"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/camera_icon_clear"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="0dp"
+                android:text="@string/scan_str"
+                android:textAlignment="textStart"
+                android:textColor="@color/clear_cyan"
+                android:textStyle="bold"
+                android:textSize="23sp"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="115dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/addoptions_border"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/games_icon_clear"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="0dp"
+                android:text="@string/games_str"
+                android:textAlignment="textStart"
+                android:textColor="@color/clear_cyan"
+                android:textStyle="bold"
+                android:textSize="23sp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/quickSearchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appOptionsButtons">
+
+        <TextView
+            android:id="@+id/quickSearch"
+            android:layout_width="360dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/quick_search_shape"
+            android:padding="5dp"
+            android:text="@string/quickSearch"
+            android:textAlignment="textStart"
+            android:textColor="@color/dark_magenta"
+            android:textSize="30sp"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,4 +2,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="light_cream">#FFDFCA</color>
+    <color name="dark_orange">#CC8C60</color>
+    <color name="medium_cyan">#557571</color>
+    <color name="dark_magenta">#425B58</color>
+    <color name="light_cyan">#A1C0BB</color>
+    <color name="clear_cyan">#E9FFF9</color>
+    <color name="cream">#F2B999</color>
 </resources>

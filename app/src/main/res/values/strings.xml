@@ -1,23 +1,27 @@
 <resources>
-    <string name="app_name">Word Cache</string>
-    <string name="header_str">Containers</string>
+    <string name="app_name">WordCache</string>
+    <string name="header_str">Add new vocabulary</string>
 
-    <!-- Colors -->
-    <color name="dark_magenta">#425B58</color>
-    <color name="light_cyan">#A1C0BB</color>
-    <color name="clear_cyan">#E9FFF9</color>
 
     <!-- Stuff -->
     <string name="nav_drw_open">Open navigation drawer</string>
     <string name="nav_drw_close">Closer navigation drawer</string>
     <string name="header_brd_desc">Border at the bottom of the menu header.</string>
     <string name="new_word">New word</string>
+    <string name="containers_str">Containers</string>
     <string name="new_container">New container</string>
     <string name="quickSearch">Quick search...</string>
+    <string name="stats_str">Stats</string>
+    <string name="settings_str">Settings</string>
+    <string name="learnWord_str">Word of the day</string>
+    <string name="scan_str">Scan</string>
+
 
     <!-- Menu items -->
     <string name="home_str">Home</string>
     <string name="games_str">Games</string>
     <string name="history_str">History</string>
     <string name="about_str">About</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

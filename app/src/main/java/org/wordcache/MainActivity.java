@@ -15,6 +15,9 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -23,6 +26,29 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     NavigationView navigationView;
 
     Toolbar toolbar;
+
+    private final BottomNavigationView.OnNavigationItemSelectedListener navListener = item -> {
+        // By using switch we can easily get
+        // the selected fragment
+        // by using there id.
+        Fragment selectedFragment = null;
+        int itemId = item.getItemId();
+        if (itemId == R.id.home) {
+            selectedFragment = new HomeFragment();
+        } else if (itemId == R.id.containers) {
+            selectedFragment = new ContainersFragment();
+        } else if (itemId == R.id.stats) {
+            selectedFragment = new StatsFragment();
+        } else if (itemId == R.id.settings) {
+            selectedFragment = new SettingsFragment();
+        }
+        // It will help to replace the
+        // one fragment to other.
+        if (selectedFragment != null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
+        }
+        return true;
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +65,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.toolbar);
-        //System.out.println("The call returns: " + findViewById(R.id.toolbar).getClass().getName());
-
 
         // Toolbar
         setSupportActionBar(toolbar);
@@ -53,6 +77,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         // To make the navigation view clickable
         navigationView.setNavigationItemSelectedListener(this);
+
+        BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
+        bottomNav.setOnNavigationItemSelectedListener(navListener);
+
+        // as soon as the application opens the first
+        // fragment should be shown to the user
+        // in this case it is algorithm fragment
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+
+
+
+
+//
+//
+
 
     }
 
